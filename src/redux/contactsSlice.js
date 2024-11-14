@@ -15,7 +15,7 @@ const slice = createSlice({
 		addContact(state, action) {
 			state.items.push(action.payload);
 		},
-		deleteTask(state, action) {
+		deleteContact(state, action) {
 			state.items = state.items.filter((item) => item.id != action.payload);
 		},
 	},
@@ -24,5 +24,5 @@ const slice = createSlice({
 // функція-селектор selectContacts
 export const selectContacts = (state) => state.contacts.items;
 
-export const { addContact, deleteTask } = slice.actions;
+export const { addContact, deleteContact } = slice.actions;
 export default slice.reducer;
